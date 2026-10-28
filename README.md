@@ -7,7 +7,7 @@ The [gl-transitions](https://gl-transitions.com) collection for Apple platforms:
 With the Swift Package Manager, from [gl-transitions-swift](https://github.com/gl-transitions/gl-transitions-swift), where each release of the [gl-transitions npm package](https://www.npmjs.com/package/gl-transitions) is published with the same version (in Xcode: File > Add Package Dependencies…):
 
 ```swift
-.package(url: "https://github.com/gl-transitions/gl-transitions-swift", from: "1.76.1"),
+.package(url: "https://github.com/gl-transitions/gl-transitions-swift", from: "2.0.0"),
 ```
 
 and `.product(name: "GLTransitions", package: "gl-transitions-swift")` in your target's dependencies.
@@ -21,8 +21,8 @@ import GLTransitions
 let composition = try await TransitionComposition.make(
     clips: [AVURLAsset(url: first), AVURLAsset(url: second), AVURLAsset(url: third)],
     transitions: [
-        TransitionStep(GLTransitions.named("crosswarp")!),
-        TransitionStep(GLTransitions.named("cube")!, duration: CMTime(value: 3, timescale: 2), params: ["persp": .float(0.7)]),
+        TransitionStep(GLTransitions.named("CrossWarp")!),
+        TransitionStep(GLTransitions.named("Cube")!, duration: CMTime(value: 3, timescale: 2), params: ["persp": .float(0.7)]),
     ]
 )
 
@@ -40,7 +40,7 @@ For your own compositions, `TransitionInstruction` describes a segment (a track 
 
 ```swift
 let renderer = try TransitionRenderer() // the default Metal device
-let transition = GLTransitions.named("directionalwarp")!
+let transition = GLTransitions.named("DirectionalWarp")!
 
 try renderer.encode(
     transition,
