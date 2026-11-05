@@ -7,7 +7,7 @@ The [gl-transitions](https://gl-transitions.com) collection for Apple platforms:
 With the Swift Package Manager, from [gl-transitions-swift](https://github.com/gl-transitions/gl-transitions-swift), where each release of the [gl-transitions npm package](https://www.npmjs.com/package/gl-transitions) is published with the same version (in Xcode: File > Add Package Dependencies…):
 
 ```swift
-.package(url: "https://github.com/gl-transitions/gl-transitions-swift", from: "2.4.0"),
+.package(url: "https://github.com/gl-transitions/gl-transitions-swift", from: "2.5.0"),
 ```
 
 and `.product(name: "GLTransitions", package: "gl-transitions-swift")` in your target's dependencies.
